@@ -4,9 +4,16 @@
     <NoWarn>$(NoWarn);1591</NoWarn>
     <GenerateDocumentationFile>false</GenerateDocumentationFile>
   </PropertyGroup>
+  <ItemGroup>
+    <Content Remove="wwwroot\assets\scss\_custom.scss" />
+  </ItemGroup>
 
   <ItemGroup>
     <Folder Include="wwwroot\uploads\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="wwwroot\assets\scss\_custom.scss" />
   </ItemGroup>
 
   <ItemGroup>

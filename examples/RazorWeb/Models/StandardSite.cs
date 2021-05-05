@@ -7,11 +7,11 @@
  * http://github.com/tidyui/coreweb
  *
  */
-
+using RazorWeb.Models.Regions;
 using Piranha.AttributeBuilder;
-using Piranha.Models;
 using Piranha.Extend;
-using Piranha.Extend.Fields;
+using Piranha.Models;
+
 
 namespace RazorWeb.Models
 {
@@ -21,7 +21,16 @@ namespace RazorWeb.Models
     [SiteType(Title = "Standard Site")]
     public class StandardSite : SiteContent<StandardSite>
     {
-        [Region]
-        public HtmlField Footer { get; set; }
+        /// <summary>
+        /// Gets/sets the header.
+        /// </summary>
+        [Region(Title = "Header", SortOrder = 1)]
+        public Header Header { get; set; }
+
+        /// <summary>
+        /// Gets/sets the header.
+        /// </summary>
+        [Region(Title = "Footer", SortOrder = 2)]
+        public Footer Footer { get; set; }
     }
 }
